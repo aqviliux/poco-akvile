@@ -32,15 +32,7 @@
             exercitationem consequatur ab ut nam numquam eveniet debitis iusto! Distinctio, corporis
              vitae sint, ab tenetur, doloribus aperiam eum eius quidem reprehenderit cupiditate est
               recusandae consequuntur voluptates porro provident maiores iusto quis cum alias maxime harum.
-               Molestiae, cupiditate perferendis id nam, sequi quidem libero at quas excepturi numquam 
-               laudantium eveniet quaerat dolorum ad, porro unde fugit voluptatem! Doloribus provident eaque,
-                facere sed dicta omnis itaque pariatur commodi, saepe repellat quas modi iure veniam! 
-                In eligendi ex fugiat quasi obcaecati eos quam beatae? Reprehenderit illo tempora ipsam 
-                optio praesentium repellat esse inventore ex asperiores dolorem doloribus incidunt, assumenda labore repudiandae impedit
-                 provident. Quas vero sit cupiditate cumque nobis assumenda molestias alias iure esse, fuga incidunt ipsam, eaque temporibus, 
-                 veritatis nam eos velit facilis deleniti culpa maiores? Nesciunt, harum molestias repudiandae minus ut tempore quo expedita 
-                 deleniti voluptatum, voluptas libero quod hic eaque asperiores debitis non corporis iusto, dolore est dolorum. 
-                 Illum id placeat sapiente saepe? A odio magnam quod sapiente tempore. Veniam voluptatum quaerat quam.
+               Molestiae.
     </p>
     <p>
         I am from small country - Lithuania. It is near Baltic sea. The neigborhood countries
@@ -84,71 +76,14 @@
     <br>
     <br>
 
-    <fieldset name="contact">
-    <legend>Contact details</legend>
     <p>If you want to known more about my country, please write your email here and I will answer you.</p>
-        <!--get method - all data which I sent in form will be in search url; direct link to the result-->
-        <!--but for password things I should use post method-->
-        <!--should to conect label for with input type via id's-->
-        <form name= "content" action="content.html" method="post">
+
+        <form >
             <label for="email">Your Email:</label>
             <input type="email" name="email" id="email"  required />
             <input type="submit" value="Submit" />
         </form>
-        <br>
-        <!--enctype - for file uploading-->
-        <form name = "choose" action="choose.html" method="get" enctype="multipart/form-data">
-            <label for="select1">You could select it:</label>
-            <select name="s1" id="select1">
-                <option value="1">Select1</option>
-                <option value="2">Select2</option>
-            </select>
-            <input type="Date">
-        </form>
-        <br>
-        <form>
-        <label name="Sallutation">Sallutation *</label>
-        <!--required only on first one in group-->
-            <input type="radio" name="sall" id="male" value="Male" required/>
-            <label for="male">Male</label>
-            <input type="radio" name="sall" id="female" value="Female"/>
-            <label for="female">Female</label>
-        </form>
-        <br>
 
-        <form name = "check" action="search.html" method="get" enctype="multipart/form-data">
-            <input type="search" />
-        </form>
-        <br>
-    </fieldset>
-
-    <fieldset name="Check_input">
-        <legend>Checking inputs</legend>
-        <form class="input" name = "check" method="get" >
-            <input type = "email" name="email" required/>
-            <input type = "phone" required/>
-            <input type = "number" required/>
-            <input type = "color" required/>
-            <input type = "date" required/>
-            <input type="submit" value="Submit" />
-        </form>
-
-        <br>
-        <form>
-        <label for="browser">Choose your browser from the list:</label>
-            <!--returns options which contains  typed letter-->
-            <input list="browsers" name="browser" id="browser" placeholder="start typing and select...">
-            <datalist id="browsers">
-            <option value="Edge">
-            <option value="Firefox">
-            <option value="Chrome">
-            <option value="Opera">
-            <option value="Safari">
-            </datalist>
-
-        </form>
-    </fieldset>
-        <br>
         <br>
 
 </main>

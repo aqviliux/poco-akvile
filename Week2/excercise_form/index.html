@@ -16,20 +16,20 @@
     <form >
     <fieldset>
         <legend>Personaliche Daten</legend>
-            <label for="title" name="title">Titel</label>
-            <input type="text" id="title" name="title" placeholder="Dr. hc" /><br>
-            <label for="vname" name="vname">Vorname</label>
-            <input type="text" id="vname" placeholder="Peter" /><br>
-            <label for="nname" name="nname">Nachname</label>
-            <input type="text" id="nname" placeholder="Muster" />
+            <label for="title">Titel</label>
+            <input type="text" id="title" name="title"/><br>
+            <label for="vname">Vorname</label>
+            <input type="text" id="vname"/><br>
+            <label for="nname">Nachname</label>
+            <input type="text" id="nname"/>
             <br>
-            <label name="geschlecht">Geschlecht</label>
+            <label>Geschlecht</label>
             <input type="radio" name="sall" id="male" value="Male" required/>
             <label for="male">M</label>
             <input type="radio" name="sall" id="female" value="Female"/>
             <label for="female">F</label>
             <br>
-            <label name="sprache">Sprache</label>
+            <label>Sprache</label>
             <input type="radio" name="spr" id="de" value="deutch" required/>
             <label for="de">DE</label>
             <input type="radio" name="spr" id="fr" value="french"/>
@@ -40,42 +40,45 @@
 
     <fieldset>
         <legend>Kontaktdaten</legend>
-        <label for="tel" name="telefonnumber">Telefon</label>
+        <label for="tel">Telefon</label>
         <input type="tel" id="tel" name="telefon" required/><br>
-        <label for="mtel" name="mobile">Mobile</label>
+        <label for="mtel">Mobile</label>
         <input type="tel" id="mtel" placeholder="optional" /><br>
-        <label for="htel" name="hauptnummer">Hauptnummer</label>
+        <label for="htel">Hauptnummer</label>
         <input type="tel" id="htel" placeholder="optional" /><br>
-        <label for="fax" name="fax">Fax</label>
+        <label for="fax">Fax</label>
         <input type="text" id="fax" inputmode="numeric" placeholder="optional" /><br>
-        <label for="mail1" name="mail1">Mail 1</label>
+        <label for="mail1">Mail 1</label>
         <input type="email" id="mail1" required /><br>
-        <label for="mail2" name="mail2">Mail 2</label>
+        <label for="mail2">Mail 2</label>
         <input type="email" id="mail2" placeholder="optional" /><br>
         
     </fieldset>
 
     <fieldset>
         <legend>Adressdaten</legend>
-        <label for="firma" name="firma">Firma</label>
+        <label for="firma">Firma</label>
         <input type="text" id="firma" name="firma" required/><br>
-        <label for="zfirma" name="zfirma">Zusatz Firma</label>
+        <label for="zfirma">Zusatz Firma</label>
         <input type="text" id="zfirma" placeholder="optional" /><br>
-        <label for="hpage" name="homepage">Homepage</label>
+        <label for="hpage">Homepage</label>
         <input type="text" id="hpage" placeholder="optional" /><br>
-        <label for="addr" name="address">Adresse/Haus nr.</label>
-        <input type="text" id="addr" inputmode="numeric" placeholder="Musterstrasse" />
-        <input type="text" id="addr" inputmode="numeric" placeholder="33" /><br>
-        <label for="zaddr" name="zaddress">Zusatz Adresse</label>
+        <label for="addr">Adresse</label>
+        <input type="text" id="addr"/>
+        <label for="hausnr">Haus nr.</label>
+        <input type="text" id="hausnr" inputmode="numeric"/><br>
+        <label for="zaddr">Zusatz Adresse</label>
         <input type="text" id="zaddr" placeholder="optional" /><br>
-        <label for="postfach" name="postfach">Postfach</label>
+        <label for="postfach">Postfach</label>
         <input type="text" id="postfach" placeholder="optional" /><br>
-        <label for="ort" name="ort">PLZ/Ort</label>
-        <input type="text" id="ort" inputmode="numeric" placeholder="8800" />
-        <input type="text" id="ort" inputmode="numeric"  placeholder="Musterstadt" /><br>
-        <label for="kanton" name="kanton">Kanton/Land</label>
-        <input type="text" id="kanton" placeholder="ZH" />
-        <input type="text" id="kanton"  placeholder="Schweiz" />        
+        <label for="plz">PLZ</label>
+        <input type="text" id="plz" inputmode="numeric"/>
+        <label for="ort">Ort</label>
+        <input type="text" id="ort"/><br>
+        <label for="kanton">Kanton</label>
+        <input type="text" id="kanton"/>
+        <label for="land">Land</label>
+        <input type="text" id="land"/>        
     </fieldset>
     <input type="submit" value="Submit">
 
