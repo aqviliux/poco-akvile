@@ -1,0 +1,17 @@
+
+
+img {
+    width: 300px;
+    height: auto;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    /*this fit adaot img to container - contain or cover*/
+    object-fit: cover;
+    object-position: center;
+    
+}
+
+input {
+    display: block;
+}
