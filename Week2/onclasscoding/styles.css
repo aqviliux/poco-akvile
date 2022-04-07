@@ -1,12 +1,11 @@
 
-
 img {
-    width: 300px;
-    height: auto;
     border-radius: 50%;
+    height: 300px;
+    width: 300px;
     display: block;
     margin: 0 auto;
-    /*this fit adaot img to container - contain or cover*/
+    /*this fit adapt img to container - contain or cover*/
     object-fit: cover;
     object-position: center;
     
