@@ -52,7 +52,7 @@
         order: 1;
       }
       .content {
-        order: 1;
+        order: 2;
       }
       .featsign {
         order: 3;
@@ -72,7 +72,32 @@
       }
     }
     /* tablet */
-    @media (min-width: 481px) AND (max-width: 1023px) {
+    @media (min-width: 481px) AND (max-width: 1024px) {
+      header {
+        order: 1;
+      }
+      .content {
+        order: 2;
+      }
+      .featsign {
+        order: 3;
+      }
+      .feat1 {
+        flex: 0 0 50%;
+        order: 2;
+      }
+      .feat2 {
+        flex: 0 0 50%;
+        order: 4;
+      }
+      .feat3 {
+        flex: 0 0 50%;
+        order: 3;
+      }
+      .sign {
+        flex: 0 0 50%;
+        order: 1;
+      }
     }
   </style>
 
