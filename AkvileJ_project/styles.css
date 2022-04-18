@@ -130,20 +130,10 @@ td {
     flex: 0 0 45%;
 }
 
-.grid_memory {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    margin: 0;
-    box-sizing: border-box;
-    justify-items: stretch;
-}
-
 .clock {
     display: flex;
     align-items: center;
     justify-content: center;
-
     height: 160px;
     width: 160px;
     border-radius: 50%;
@@ -151,13 +141,48 @@ td {
     color: white;
     font-weight: 600;
 }
+
+/* CSS for memory game */
+.grid_memory {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    margin: 0;
+    box-sizing: border-box;
+    justify-items: center;
+    justify-content: space-between;
+    gap: 2%;
+}
+
 .selected {
-    background-color: red;
+    /* background-color: red; */
+    visibility: visible;
 }
 
 .found {
-    background-color: blue;
+    /* background-color: blue; */
+    visibility: visible;
 }
 .closed {
-    background-color: green;
+    /* background-color: green; */
+    visibility: hidden;
+}
+
+.memoryimg {
+    width: 95%;
+    height: 12rem;
+    place-self: center;
+    padding: 0.5rem;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 0;
+}
+
+.orchmemory {
+    width: 95%;
+    height: 12rem;
+    display: block;
+    padding: 0;
+    border-radius: 25px;
+    margin: 0;
 }

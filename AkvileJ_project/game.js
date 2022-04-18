@@ -2,6 +2,8 @@ let cards;
 
 function init() {
     cards = createArray();
+    printStatus();
+    updateCardsUI();
 }
 
 function showHide(event, cardNo) {
@@ -12,7 +14,7 @@ function showHide(event, cardNo) {
 //create initial array
 function createArray() {
     var result = [];
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 6; i++) {
         result.push(i + 1);
         result.push(i + 1);
     }
@@ -31,35 +33,32 @@ function pick(cardNo) {
     //add selected card array cell number to selectedcards array
     selectedCards.push(cardNo);
     printStatus();
-
-    //add second selected cardno and do comparision
-    if (selectedCards.length > 1) {
-        //updateSelected();
-        checkEqual();
-    }
     //update all cards onsite
     updateCardsUI();
+    //add second selected cardno and do comparision
+    if (selectedCards.length > 1) {
+        checkEqual();
+    }
+
+    printStatus();
 }
 
 function updateCardsUI() {
-    var x = document.getElementById("gridDIV").querySelectorAll(".memorybutt");
+    var x = document.getElementById("gridDIV").querySelectorAll(".memoryimg");
     for (i = 0; i < x.length; i++) {
-        var myButt = x[i].querySelector("button");
-        const list = myButt.classList;
+        var myimg = x[i].querySelector("img");
+        const list = myimg.classList;
         list.remove("selected");
         list.remove("found");
         list.remove("closed");
         switch (resolveCardStatus(i)) {
             case "selected":
-                // myButt.style.backgroundColor = "red";
                 list.add("selected");
                 break;
             case "found":
-                // myButt.style.backgroundColor = "blue";
                 list.add("found");
                 break;
             case "closed":
-                // myButt.style.backgroundColor = "green";
                 list.add("closed");
                 break;
         }
@@ -80,6 +79,7 @@ function printStatus() {
     const output = cards.map(function (card, index) {
         return resolveCardStatus(index);
     });
+    // console.log(output);
 }
 
 function checkEqual() {
