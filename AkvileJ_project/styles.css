@@ -1,17 +1,34 @@
-.topnav {
-    background-color: #0066ff;
+nav {
     position: sticky;
     top: 0;
 }
 
+.topnav {
+    background-color: #0066ff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: space-around;
+    gap: 4px;
+}
+
+/* .topnav > a {
+    flex: 0 0 20%;
+    border-radius: 25px;
+} */
+
 /* Style the links inside the navigation bar */
 .topnav a {
+    flex: 0 0 20%;
+    border-radius: 25px;
     color: white;
     text-align: center;
-    padding: 14px 16px;
-    text-decoration: underline;
-    font-size: 17px;
-    display: inline-block;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    margin: 10px;
+    font-weight: 600;
 }
 
 /* Change the color of links on hover */
@@ -25,34 +42,22 @@
     background-color: rgb(139, 176, 250);
     color: black;
 }
-/* Style the search box inside the navigation bar */
-.topnav input[type="search"] {
-    display: inline-block;
-    border-radius: 25px;
-    padding: 5px 5px;
-    width: 25%;
-    font-size: 17px;
-    background-color: #cce0ff;
-    border: none;
-}
 
 body {
     font-family: "Source Serif Pro", serif;
     margin: 0 auto;
-    max-width: 720px;
+    max-width: 900px;
     background-color: #cce0ff;
-    font-size: 1.1em;
     text-align: justify;
 }
 
 button {
-    background-color: #4d94ff;
-    border: 2px solid black;
+    background-color: rgb(139, 176, 250);
     border-radius: 25px;
     color: white;
     padding: 15px 30px;
     text-align: center;
-    font-size: 16px;
+    font-size: 1rem;
     margin: 4px 2px;
     cursor: pointer;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -61,10 +66,6 @@ button {
 button:hover {
     background-color: #0066ff;
     cursor: pointer;
-}
-
-nav button {
-    padding: 5px 20px;
 }
 
 h1 {
@@ -88,10 +89,15 @@ td {
     display: flex;
     flex-direction: row;
     height: auto;
+    gap: 10px;
 }
 
 .about-me p {
     margin: 0;
+}
+
+#member-section {
+    display: none;
 }
 
 .profile-photo {
@@ -100,19 +106,10 @@ td {
     border-radius: 25px;
 }
 
-.orch-img {
-    width: 200px;
-    height: 250px;
-    padding: 15px;
-    border-radius: 25px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.orch_images {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.video {
+    width: 100%;
+    max-width: 420px;
+    height: 315px;
 }
 
 /* Create two equal columns that floats next to each other */
@@ -122,6 +119,14 @@ td {
     flex-wrap: wrap;
     width: 100%;
     justify-content: space-around;
+    gap: 10px;
+}
+.orch-img {
+    width: 200px;
+    height: 250px;
+    padding: 15px;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .flex_child {
     padding: 15px;
@@ -129,7 +134,9 @@ td {
 .flex-container > .flex_child {
     flex: 0 0 45%;
 }
-
+.flex-container > .orch-img {
+    flex: 0 0 20%;
+}
 .clock {
     display: flex;
     align-items: center;
@@ -137,7 +144,7 @@ td {
     height: 160px;
     width: 160px;
     border-radius: 50%;
-    background-color: blue;
+    background-color: #0066ff;
     color: white;
     font-weight: 600;
 }
@@ -145,7 +152,7 @@ td {
 /* CSS for memory game */
 .grid_memory {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
     margin: 0;
     box-sizing: border-box;
@@ -155,34 +162,48 @@ td {
 }
 
 .selected {
-    /* background-color: red; */
     visibility: visible;
 }
 
 .found {
-    /* background-color: blue; */
     visibility: visible;
 }
 .closed {
-    /* background-color: green; */
     visibility: hidden;
 }
 
 .memoryimg {
-    width: 95%;
-    height: 12rem;
+    width: 100%;
     place-self: center;
-    padding: 0.5rem;
+    padding: 5px;
     border-radius: 25px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin: 0;
 }
 
 .orchmemory {
-    width: 95%;
-    height: 12rem;
-    display: block;
-    padding: 0;
+    width: 100%;
+    padding-top: 5px;
     border-radius: 25px;
     margin: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        padding: 0 10px;
+    }
+    .topnav {
+        flex-wrap: wrap;
+    }
+    .topnav > a {
+        flex: 0 0 35%;
+    }
+    .about-me {
+        flex-wrap: wrap;
+    }
+    /* .grid_memory {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    } */
 }
