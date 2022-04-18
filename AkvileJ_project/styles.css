@@ -34,10 +34,10 @@
     font-size: 17px;
     background-color: #cce0ff;
     border: none;
-  }
+}
 
 body {
-    font-family: 'Source Serif Pro', serif;
+    font-family: "Source Serif Pro", serif;
     margin: 0 auto;
     max-width: 720px;
     background-color: #cce0ff;
@@ -56,7 +56,7 @@ button {
     margin: 4px 2px;
     cursor: pointer;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
+}
 
 button:hover {
     background-color: #0066ff;
@@ -66,7 +66,7 @@ button:hover {
 nav button {
     padding: 5px 20px;
 }
- 
+
 h1 {
     font-stretch: extra-expanded;
     font-weight: bold;
@@ -74,22 +74,24 @@ h1 {
     text-shadow: 2px 2px 5px;
 }
 
-h3 {
+/* h3 {
     font-stretch: semi-expanded;
-}
+    margin: 0;
+} */
 
-
-table,th,td {
+table,
+th,
+td {
     border: 1px solid black;
 }
 .about-me {
     display: flex;
     flex-direction: row;
-    height: auto;   
+    height: auto;
 }
 
 .about-me p {
-    margin: 0%;
+    margin: 0;
 }
 
 .profile-photo {
@@ -97,7 +99,6 @@ table,th,td {
     margin-right: 16px;
     border-radius: 25px;
 }
-
 
 .orch-img {
     width: 200px;
@@ -107,9 +108,11 @@ table,th,td {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.orch-img + .orch-img{
-    margin-left: 10px;
-
+.orch_images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 /* Create two equal columns that floats next to each other */
@@ -118,13 +121,43 @@ table,th,td {
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
+    justify-content: space-around;
 }
-.flex-container > div {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 1;
+.flex_child {
     padding: 15px;
-    flex-grow: 1;
-    
+}
+.flex-container > .flex_child {
+    flex: 0 0 45%;
+}
+
+.grid_memory {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin: 0;
+    box-sizing: border-box;
+    justify-items: stretch;
+}
+
+.clock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    background-color: blue;
+    color: white;
+    font-weight: 600;
+}
+.selected {
+    background-color: red;
+}
+
+.found {
+    background-color: blue;
+}
+.closed {
+    background-color: green;
 }
