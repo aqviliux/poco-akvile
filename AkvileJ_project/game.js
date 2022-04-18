@@ -1,24 +1,68 @@
 let cards;
 
 function init() {
-    cards = createArray();
+    cards = shuffle(hardcodedimg);
+    updateMixedImages();
     printStatus();
     updateCardsUI();
 }
+function updateMixedImages() {
+    var x = document.getElementById("gridDIV").querySelectorAll(".memoryimg");
+    for (i = 0; i < x.length; i++) {
+        var myimg = x[i].querySelector("img");
+        myimg.src = cards[i];
+    }
+}
 
-function showHide(event, cardNo) {
+function showHide(cardNo) {
     // event.target.innerHTML = cards[cardNo];
     pick(cardNo);
 }
 
-//create initial array
-function createArray() {
-    var result = [];
-    for (let i = 0; i < 6; i++) {
-        result.push(i + 1);
-        result.push(i + 1);
+// //create initial array
+// function createArray() {
+//     var result = [];
+//     for (let i = 0; i < 6; i++) {
+//         result.push(i + 1);
+//         result.push(i + 1);
+//     }
+//     return result;
+// }
+
+var hardcodedimg = [
+    "./images/IMG_7947.JPG",
+    "./images/IMG_7965.JPG",
+    "./images/IMG_8674.JPG",
+    "./images/IMG_8014.JPG",
+    "./images/IMG_5620.JPG",
+    "./images/IMG_5601.JPG",
+    "./images/IMG_7947.JPG",
+    "./images/IMG_7965.JPG",
+    "./images/IMG_8674.JPG",
+    "./images/IMG_8014.JPG",
+    "./images/IMG_5620.JPG",
+    "./images/IMG_5601.JPG",
+];
+
+function shuffle(hardcodedimg) {
+    var array = [].concat(hardcodedimg);
+    var currentIndex = array.length,
+        temporaryValue,
+        randomIndex;
+
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+
+        // And swap it with the current element.
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
     }
-    return result;
+
+    return array;
 }
 
 var selectedCards = [];
