@@ -1,0 +1,303 @@
+
+excercise 1
+ Allow the user to input digits, afterwards sort 
+ and print them in numerical order.
+start
+create variable/empty array tp store numbers in it.
+create an input number form
+check if it is a number
+if yes then store it in the array, if not, print out "error"
+
+compare all the numbers and sort them in ascending order(1<2<3....)
+repeat process
+end
+
+
+SortNumbers
+    INITIALIZE userInput AS String;
+    INITIALIZE digitsList AS List;
+    INITIALIZE output AS String;
+    INITIALIZE counter;
+
+    PROMPT "Please input minimum 2 digits and 
+        maximum 10 digits (0-9), separated by commas" AS userInput
+
+    SPLIT userInput AT THE SEPERATOR "," TO digitsList
+    // check for spaces, are there commas in the string
+
+    FOR EACH item OF digitsList
+        IF not a digit
+            PROMPT ("Please make sure that you only add single digits (0-9)");
+        END IF
+    END FOR EACH                            
+
+END SortNumbers
+
+
+
+excercise 2
+Allow the user to input numbers, add them and print the result.
+start
+create empty array tp store numbers in it.
+create variable for total sum with value = "0"
+create an input number form
+check if it is a number
+if yes then store it in the array, if not, print out "error"
+repeat process
+sum all numbers
+assign calculated sum to variable "sum"
+print out the result (x+y+z+...).
+end
+
+
+exercise 3
+Allow the user to input numbers, subtract the smaller 
+from the bigger number and print the result.
+start
+create two variables to store written numbers
+create variable for storing result "result"
+allow user to input just two numbers
+check if it is a number
+if yes then store it in the variable, if not, print out "error"
+compare and indetified which variable is smaller/bigger
+ var1 < var2 
+ substract the smaller from bigger
+ print the result from variable result
+
+end
+
+exercise 4
+Find the day of the year for the given date. 
+For example, January 1st would be 1, and December 31st is 365.
+start
+create two variables to store written numbers
+create variable for storing result "result"
+allow user to input just two numbers
+check if it is a number
+if yes then store it in the variable, if not, print out "error"
+let user to decide if addition or substraction is need
+
+if user choose addition
+    var1 + var2
+if user choose substraction 
+    compare and indetified which variable is smaller/bigger
+    var1 < var2 
+    substract the smaller from bigger
+    var1 - var2
+
+
+ print the result from variable result
+
+end
+
+excersise5
+start
+create variable "date"
+create form type date to show calendar
+allow user to choose date from the calendar
+
+if month is January print out day
+if month is February print ut days + 31
+if month is March print ut days + 31 +28
+if month is april print ut days + 31 + 28 +31
+if month is May print ut days + 31 + 28 + 31 + 30
+.....
+if month is December, print out days + 31 +28 + 31+ 30+31+31+31+30+31+30
+
+end
+
+Darkness phoebia
+constrains:
+torch long 12; father comes in 1min, mother 2min, son 4min, daughter 5min
+just two peoples in one timme crossing the tunnel.
+moving in the speed of slowest one
+
+the slowest should go together
+firstly go mother and father
+it takes 2min
+come back father
+it takes 1 min
+go son and daughter
+it takes 5 min
+come back mother 
+it takes 2 min
+go mother ant father
+it takes 2 min
+
+start
+dad + mama = 2min
+return dad = 1min
+change the torch holder
+son + daughter = 5min
+change the torch holder
+return mama = 2min
+dad + mama =2min
+end
+
+
+start 
+> m + d: 2min
+< d: 1min (or m)
+> da + so: 5min
+< m: 2min (or d)
+> m + d: 2min
+= Total: 12min
+
+constrains
+2 peoples max per route
+12 min in total(1 tourch only)
+daughter and son need to go together to save time;
+slowest speed counts
+
+think of the time, check always the time left
+
+
+DarknessPhoebia
+    INITIALIZE maxTime as 12
+    INITIALIZE totalTime as 0
+    INITIALIZE speedFather as 1
+    INITIALIZE speedMother as 2
+    INITIALIZE speedSon as 4
+    INITIALIZE speedDaughter as 5
+    INITIALIZE maxPeople as 2
+    INITIALIZE peopleOnTheOtherSide as 0
+    INITIALIZE peopleOnTheStart as 4
+        //we need to know it
+    INITIALIZE slowestCouple
+    INITIALIZE fastestCouple
+
+
+//first step - to find couples
+
+Step1: 
+compare time with each other to sort them by speed - output is ordered list
+
+check who the two fastest people are and store their slowest speed(time) in fastestCouple
+check who the two slowest people are and store their slowest speed(time) in slowestCouple
+
+Step2: 2 fastest going
+    IF fastestCouple <=maxPeople
+        totalTime = totalTime + (slowest time of the 2 fastest)
+        peopleOnTheOtherSide = peopleOnTheStart - 2
+    END IF
+step3: the fastest is going back
+    totalTime = totalTime + (fastest time of the 2 fastest)
+    peopleOnTheStart = peopleOnTheStart+1
+step4: 2slowest going
+    totalTime = totalTime + (slowest time of the 2 slowest)
+    peopleOnTheStart = peopleOnTheStart-2
+    peopleOnTheOtherSide = peopleOnTheOtherSide +2
+step5: the fastest is going back
+    totalTime = totalTime + (slowest time of the 2 fastest)
+    peopleOnTheStart = peopleOnTheStart+1
+step6: the remaining pair going
+    totalTime = totalTime + (slowest time of the 2 fastest)
+    peopleOnTheStart = peopleOnTheStart - 2
+
+
+If totalTime <= maxTime AND peopleOnTheStart == 0
+    PRINT "Success!"
+ELSE
+    PRINT "Ty again."
+END IF
+
+
+END DarknessPhoebia
+
+
+
+TipCalculator
+    Initialize billAmount to 0
+    Initialize tip to 0
+    Initialize tipRate to 0
+    Initialize total to 0
+
+    Prompt for billAmount with "What is the bill amount?"
+    Prompt for tipRate with "What is the tip rate?"
+
+    convert billAmount to a number
+    convert tipRate to a number
+
+    tip = billAmount * (tipRate / 100)
+    round tip up to nearest 5 rappen  
+    total = billAmount + tip
+
+    Display "Tip : CHF" + tip
+    Display "Total : CHF" + total
+End
+
+
+
+For each exercise follow this process:
+
+List inputs, process and outputs
+Write test cases
+Find constraints
+Write the algorithm in pseudocode
+
+1.Create a program that prompts for your name and prints a greeting using your name.
+
+input - input name in letter
+processes - connect name with string "Hello"
+output: Hello + [Name]
+
+SayHello
+    INITIALIZE inputName as string
+    INITIALIZE greeting as "Hello"
+    INITIALIZE message as empty string
+
+    prompt for the name with "What is your name"
+    concat greeting with inputName
+        greeting + " " + inputName as message
+    PRINT message
+END SayHello
+
+2.Counting the number of characters
+Create a program that prompts for an input string and displays output 
+that shows the input string and the number of characters the string contains.
+
+
+input - input string in letter
+processes - connect name with string "Hello"
+output: Hello + [Name]
+
+countCharacters
+    INITIALIZE inputString as string
+    INITIALIZE numberChar as 0
+   
+
+    prompt for the string with "write something to calculate characters"
+    calculate the characters of inputed string and store it to numberChar
+
+    PRINT inputString and numberChar
+END SayHello
+
+
+5.Random password generator
+Create a random password generator. The password has to have a length
+ of at least 8 characters, at least 1 digit and 1 special char (_ or -).
+
+constrains
+-at least 8 characters, the length of password between [10-20]
+-at least one digit [0-9]
+- at least one special char (- or _)
+
+input - no or ask for password length
+output - password
+
+
+ PasswordGenerator
+    INITIALIZE length as number
+    INITIALIZE password as string
+
+    promt "Write your length for the password"
+
+    check if the length is number if not return an error "Please enter a number bigger or eaqual to 10"
+
+    variable password as empty string
+
+
+
+
+
+ END PasswordGenerator

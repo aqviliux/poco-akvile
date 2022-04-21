@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!--adapt screen to mobile devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Akvile nav</title>
+  </head>
+  <style>
+    html {
+      box-sizing: border-box;
+      font-family: "Montserrat", Arial, Helvetica, sans-serif;
+      font-size: 10px;
+      margin: 0;
+    }
+    body {
+      margin: 0;
+    }
+    .flexbox {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      min-width: 100%;
+      justify-content: space-between;
+      background-color: #d2e7f2;
+      align-items: center;
+      margin: 0;
+    }
+
+    li {
+      list-style-type: none;
+      padding: 1em;
+      padding-top: 1.5em;
+      height: 2em;
+      font-size: calc(1rem + 2vw);
+      text-align: center;
+      color: #3e3e3e;
+      flex: 1;
+      margin: 0;
+    }
+    a {
+      background-color: transparent;
+      text-decoration: none;
+    }
+    .hamflex {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    input {
+      display: none;
+    }
+  </style>
+
+  <body>
+    <!-- <div class="hamflex">
+      <input type="checkbox" id="ch1" />
+      <label for="ch1">ham nav visibility</label>
+    </div> -->
+    <!-- <span>unvisible navigation bar converts to hamburger menu</span> -->
+    <!-- use the label to bild hamburger icon , make it transparent and fix position-->
+    <!-- checkbox also is flexbox and column direction-->
+    <!-- label is sibling of nav checkbox -->
+
+    <!-- menu should be fix -->
+    <nav>
+      <ul class="flexbox">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./work.html">Work</a></li>
+        <li><a href="./blog.html">Blog</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>
