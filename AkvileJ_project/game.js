@@ -14,11 +14,6 @@ function updateMixedImages() {
     }
 }
 
-function showHide(cardNo) {
-    // event.target.innerHTML = cards[cardNo];
-    pick(cardNo);
-}
-
 // //create initial array
 // function createArray() {
 //     var result = [];
@@ -66,9 +61,13 @@ function shuffle(hardcodedimg) {
 }
 
 var selectedCards = [];
-var revealedCars = [];
 // add value of opened two cards;
 var openCards = [];
+
+//get selected card from UI
+function showHide(cardNo) {
+    pick(cardNo);
+}
 
 //choose the card
 function pick(cardNo) {
@@ -76,7 +75,6 @@ function pick(cardNo) {
 
     //add selected card array cell number to selectedcards array
     selectedCards.push(cardNo);
-    printStatus();
     //update all cards onsite
     updateCardsUI();
     //add second selected cardno and do comparision
@@ -84,7 +82,19 @@ function pick(cardNo) {
         checkEqual();
     }
 
-    printStatus();
+    output = printStatus();
+
+    if (output.every(checkFound)) {
+        const x = document.createElement("h3");
+        const list = x.classList;
+        x.innerText = "Congratulations!!!";
+        list.add("letCelebrate");
+        document.body.appendChild(x);
+    }
+}
+
+function checkFound(value) {
+    return value === "found";
 }
 
 function updateCardsUI() {
@@ -119,11 +129,12 @@ function resolveCardStatus(index) {
     return "closed";
 }
 
+//this function is not necessary....
 function printStatus() {
     const output = cards.map(function (card, index) {
         return resolveCardStatus(index);
     });
-    // console.log(output);
+    return output;
 }
 
 function checkEqual() {

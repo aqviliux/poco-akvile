@@ -175,6 +175,7 @@ td {
 .memoryimg {
     width: 100%;
     place-self: center;
+    cursor: pointer;
     padding: 5px;
     border-radius: 25px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -206,4 +207,28 @@ td {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(3, 1fr);
     } */
+}
+
+.letCelebrate {
+    color: rgb(250, 247, 104);
+    z-index: 1;
+    font-size: 4rem;
+    text-transform: uppercase;
+    animation: glow 2s ease-in-out infinite alternate;
+    margin: auto;
+    position: fixed;
+    left: 30rem;
+    top: 30rem;
+    /* bottom: 10rem;
+    right: 10rem; */
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 20px rgb(250, 247, 104);
+    }
+    to {
+        text-shadow: 0 0 20px rgb(245, 242, 72), 0 0 10px rgb(249, 245, 42);
+        transform: rotateZ(360deg);
+    }
 }
