@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      * {
+        margin: 0px;
+      }
+      .grid {
+        margin: auto;
+        width: 80%;
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-column-gap: 30px;
+      }
+      header {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        background-color: lightsteelblue;
+        grid-column-start: 1;
+        grid-column-end: 4;
+      }
+      nav {
+        background-color: lightsteelblue;
+        display: block;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        margin-bottom: 20px;
+      }
+      .main-content {
+        display: block;
+        grid-column-start: 2;
+        grid-column-end: 2;
+      }
+      .ads {
+        grid-column-start: 3;
+        grid-column-end: 3;
+      }
+      .main-content article {
+        /* margin-top: 20px;
+                margin-bottom: 20px; */
+        background-color: lightsteelblue;
+      }
+      article {
+        margin-bottom: 20px;
+      }
+      .ads aside {
+        /* margin-top: 20px; */
+        margin-bottom: 20px;
+        background-color: lightsteelblue;
+      }
+      @media (max-width: 700px) {
+        header,
+        nav,
+        .main-content,
+        .ads {
+          grid-column-start: 1;
+          grid-column-end: 1;
+        }
+        .grid {
+          grid-template-columns: 1fr;
+          grid-column-gap: 30px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="grid">
+      <header>
+        <h1>Awesome Website</h1>
+      </header>
+
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+
+      <div class="main-content">
+        <article>
+          <h2>Article 1</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+            numquam nulla eum beatae ipsam iusto esse molestias nemo? Incidunt
+            excepturi dolorem enim aperiam possimus voluptas dolorum blanditiis
+            voluptatem eos sapiente!
+          </p>
+        </article>
+
+        <article>
+          <h2>Article 2</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+            numquam nulla eum beatae ipsam iusto esse molestias nemo? Incidunt
+            excepturi dolorem enim aperiam possimus voluptas dolorum blanditiis
+            voluptatem eos sapiente! Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Sequi numquam nulla eum beatae ipsam iusto esse
+            molestias nemo? Incidunt excepturi dolorem enim aperiam possimus
+            voluptas dolorum blanditiis voluptatem eos sapiente! Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Sequi numquam nulla eum
+            beatae ipsam iusto esse molestias nemo? Incidunt excepturi dolorem
+            enim aperiam possimus voluptas dolorum blanditiis voluptatem eos
+            sapiente! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi numquam nulla eum beatae ipsam iusto esse molestias nemo?
+            Incidunt excepturi dolorem enim aperiam possimus voluptas dolorum
+            blanditiis voluptatem eos sapiente!
+          </p>
+        </article>
+      </div>
+
+      <div class="ads">
+        <aside>
+          <h2>Ad!</h2>
+        </aside>
+
+        <aside>
+          <h2>Powercoders!!</h2>
+        </aside>
+      </div>
+    </div>
+  </body>
+</html>
