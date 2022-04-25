@@ -1,0 +1,16 @@
+// What is your age? 25
+// At what age would you like to retire? 65
+// You have 40 years left until you can retire.
+// It's 2020, so you can retire in 2060.
+
+begin
+create variables currentAge and retirementAge
+create variable and assign for current year
+prompt message to ask user to insert current age and assign it to currentAge
+prompt message to ask user to insert current age and assign it to retirementAge
+check if inserted ages are numbers and the length is <= to two number
+calculate how many years do you need to live until your retirement age : retirementAge - currentAge;
+calculate the year of retirement - currentYear + (retirementAge - currentAge)
+alert the output message 
+
+end

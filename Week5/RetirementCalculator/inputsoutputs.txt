@@ -1,0 +1,25 @@
+// List inputs, outputs, processes in a text file.
+// What are the constraints? Any edge case to consider? Note in your text file.
+// Write the steps of your algorithm in pseudo-code in a second text file.
+// Write the program in JavaScript. Find out how to get the current year from your computer.
+// Push all 3 files (1 js and 2 txt) to your Github account.
+
+inputs:
+numbers for current and retirement ages; ask user to prompt it
+
+constrains:
+just numbers, and the length shouldn't be bigger then 2
+first number should be smaller then second
+should we care about age more then 100?
+
+output:
+message which contains the current year and retirement year.
+
+Processes:
+ask two variables for age and retirement age
+check if it is digits and not longer then 2
+get current year
+calculate difference between age and retirement age
+it will be like left years to retirement
+calculate year of the retirement just adding left years to current year.
+show output message. 
