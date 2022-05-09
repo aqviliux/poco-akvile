@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <!--adapt screen to mobile devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Akvile to-do list</title>
+    </head>
+    <body>
+        <h1>My to-do list</h1>
+        <label for="todo">Add new to-do</label>
+        <input type="text" id="todo" name="todo" required />
+        <button type="submit">Add</button>
+
+        <h2>DON'T FORGET TO...</h2>
+        <ol>
+            <li>
+                <input type="checkbox" name="todo1" id="todo1" checked />
+                <label for="todo1">create html, add tags</label>
+            </li>
+            <li>
+                <input type="checkbox" name="todo2" id="todo2" />
+                <label for="todo2">javascript</label>
+            </li>
+            <li>
+                <input type="checkbox" name="todo3" id="todo3" />
+                <label for="todo3">make it nice</label>
+            </li>
+        </ol>
+
+        <script src="todoList.js"></script>
+    </body>
+</html>

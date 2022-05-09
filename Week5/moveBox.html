@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Move box</title>
+        <style>
+            .container {
+                border: 2px solid black;
+                width: 1000px;
+                height: 1000px;
+            }
+            .box {
+                border: 2px solid red;
+                width: 200px;
+                height: 300px;
+                background-color: aqua;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Move Box</h1>
+
+        <div class="container">
+            <div class="box">this is the box</div>
+        </div>
+
+        <script>
+            // Make a container with a box inside.
+            // Make the box move with your scroll wheel.
+            // Find out more about the scroll wheel event.
+
+            let box = document.querySelector(".box");
+            box.addEventListener("wheel", move);
+
+            function move() {
+                this.style.backgroundColor = "blue";
+                this.style.fontSize = "50px";
+
+                //  function myFunction(event) {
+                var y = event.deltaY;
+                var currentSize = event.target.style.width;
+                if (y > 0) {
+                    newSize = parseInt(currentSize) + 10;
+                } else {
+                    newSize = parseInt(currentSize) - 10;
+                }
+                event.target.style.width = newSize + "px";
+                event.target.style.height = newSize + "px";
+            }
+        </script>
+    </body>
+</html>

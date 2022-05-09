@@ -23,6 +23,47 @@
                     alreadyRead: true,
                 },
             ];
+
+            //  Iterate through the array of books. For each book,
+            //create a p element with the book title and author and append it to the page.
+            let parent = document.querySelector("h1");
+
+            for (let i = 0; i < books.length; i++) {
+                let paragraph = document.createElement("p");
+                parent.appendChild(paragraph);
+                paragraph.innerText = `The title is ${books[i].title} and the author is ${books[i].author}`;
+            }
+
+            let list = document.createElement("ol");
+            parent.appendChild(list);
+            for (let i = 0; i < books.length; i++) {
+                let listItem = document.createElement("li");
+                list.appendChild(listItem);
+                listItem.innerText = books[i].title;
+                if (books[i].alreadyRead) {
+                    listItem.style.color = "green";
+                } else listItem.style.color = "red";
+            }
+
+            books[0].image =
+                "https://m.media-amazon.com/images/P/0465050654.01._SCLZZZZZZZ_SX500_.jpg";
+            books[1].image =
+                "https://images-na.ssl-images-amazon.com/images/I/41Z56GwEv9L._SX322_BO1,204,203,200_.jpg";
+
+            for (let i = 0; i < books.length; i++) {
+                let paragraph = document.createElement("p");
+                let img = document.createElement("img");
+                parent.appendChild(paragraph);
+                paragraph.innerText = `${books[i].title} written by ${books[i].author}`;
+                img.src = books[i].image;
+                img.width = 100;
+                img.height = 200;
+                paragraph.appendChild(img);
+            }
+
+            // Use a ul and li to display the books.
+            // Add an img to each book that links to a URL of the book cover.
+            // Change the style of the book depending on whether you have read it or not.
         </script>
     </body>
 </html>
