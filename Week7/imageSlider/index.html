@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Image Slider</title>
+        <style>
+            li {
+                text-decoration: none;
+                list-style: none;
+            }
+            .active {
+                display: block;
+            }
+
+            .btns {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: left;
+                align-items: center;
+                font-size: 1.1rem;
+            }
+            button {
+                padding: 15px 30px;
+                text-align: center;
+                font-size: 1rem;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+            .btn:disabled {
+                background-color: #cce0ff;
+                cursor: not-allowed;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <ul>
+                <li><img src="" /></li>
+            </ul>
+            <div class="btns">
+                <button disabled="" class="btn prev">Prev</button>
+                <button class="btn next">Next</button>
+            </div>
+        </header>
+        <script src="script.js"></script>
+    </body>
+</html>
